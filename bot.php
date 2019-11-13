@@ -57,6 +57,14 @@ if (!is_writable("temp")) {
 foreach (glob(__DIR__ . "/src/Shelyn/Plugin/*.php") as $file) {
     require_once($file);
 }
+$vanilla_plugins = [
+    'Evaluate',
+    'Management',
+    'Localization',
+];
+foreach ($vanilla_plugins as $file) {
+    require_once("vendor/sylae/huntress/src/Huntress/Plugin/" . $file . ".php");
+}
 
 $huntress_inhibit_auto_restart = false;
 register_shutdown_function(function () {
