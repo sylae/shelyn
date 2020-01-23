@@ -9,6 +9,7 @@
     }
   ],
   "require": {
+    "google/apiclient": "^2.4",
     "sylae/huntress": "dev-master"
   },
   "repositories": [
